@@ -1,4 +1,0 @@
-127.0.0.1 - - [09/Sep/2023:12:06:23 +0530] "GET / HTTP/1.1" 404 751
-0:0:0:0:0:0:0:1 - - [09/Sep/2023:12:06:26 +0530] "GET /sample1/WEB-INF/classes/com/sample/controller/LogonController.java HTTP/1.1" 404 682
-127.0.0.1 - - [09/Sep/2023:12:32:47 +0530] "GET / HTTP/1.1" 404 751
-0:0:0:0:0:0:0:1 - - [09/Sep/2023:12:33:05 +0530] "GET /sample1/rmsampledemo/vardhan HTTP/1.1" 200 645

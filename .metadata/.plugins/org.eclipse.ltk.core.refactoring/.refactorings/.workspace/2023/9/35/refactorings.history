@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;springhibernate&apos;" deleteContents="false" description="Delete resource &apos;springhibernate&apos;" element1="/springhibernate" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1693570914542"/>&#x0A;<refactoring comment="Delete resource &apos;springhibernate&apos;" deleteContents="false" description="Delete resource &apos;springhibernate&apos;" element1="/springhibernate" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1693571016345"/>
-</session>
