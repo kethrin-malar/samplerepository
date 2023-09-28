@@ -1,0 +1,54 @@
+package threading;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class MultithreadingFile {
+    private static final String OUTPUT_FILE = "output.txt";
+    private static final Object lock = new Object();
+    private static int nextThread = 1;
+
+    public static void main(String[] args) {
+        Thread thread1 = new Thread(() -> writeNamesToFile("Ram", "Ragul"));
+        Thread thread2 = new Thread(() -> writeNamesToFile("Abi", "Kala"));
+        Thread thread3 = new Thread(() -> writeNamesToFile("Bala", "Vimala"));
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
+    }
+
+    private static void writeNamesToFile(String name1, String name2) {
+        try {
+            FileWriter writer;
+            synchronized (lock) {
+                while (!Thread.currentThread().getName().equals("Thread-" + nextThread)) {
+                    try {
+                        lock.wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                private static void writeNamesToFile(List<String> names) {
+                    try {
+                        FileWriter writer;
+                        synchronized (lock) {
+                            writer = new FileWriter(OUTPUT_FILE, true);
+                            for (String name : names) {
+                                writer.write(name + "\n");
+                                System.out.println(name);
+                            }
+                            writer.close();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+
