@@ -1,0 +1,18 @@
+2023-09-19 14:54:54 (Sample.java:22) main()- Hello this is a info message
+ 2023-09-19 14:54:54 (Sample.java:23) main()- Hello this is a warn message
+ 2023-09-19 14:54:54 (Sample.java:24) main()- Hello this is a error message
+ 2023-09-19 14:54:54 (Sample.java:27) main()- Hello this is a debug message
+ 2023-09-19 14:54:54 (Sample.java:14) interestCalc()- in ic method Hello this is a debug message
+
+ 2023-09-19 14:55:29 (Sample.java:24) main()- Hello this is a error message
+
+ 2023-09-19 14:56:15 (Sample.java:22) main()- Hello this is a info message
+ 2023-09-19 14:56:15 (Sample.java:23) main()- Hello this is a warn message
+ 2023-09-19 14:56:15 (Sample.java:24) main()- Hello this is a error message
+
+ 2023-09-19 14:57:42 (Sample.java:22) main()- Hello this is a info message
+ 2023-09-19 14:57:42 (Sample.java:23) main()- Hello this is a warn message
+ 2023-09-19 14:57:42 (Sample.java:24) main()- Hello this is a error message
+ 2023-09-19 14:57:42 (Sample.java:27) main()- Hello this is a debug message
+ 2023-09-19 14:57:42 (Sample.java:14) interestCalc()- in ic method Hello this is a debug message
+ 
