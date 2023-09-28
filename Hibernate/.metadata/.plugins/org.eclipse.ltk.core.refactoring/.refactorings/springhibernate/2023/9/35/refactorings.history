@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TestHibernate.java&apos; to &apos;samplehibernate/src/samplehibernate&apos;&#x0D;&#x0A;- Original project: &apos;springhibernate&apos;&#x0D;&#x0A;- Destination element: &apos;samplehibernate/src/samplehibernate&apos;&#x0D;&#x0A;- Original element: &apos;TestHibernate.java&apos;" description="Copy file" destination="=samplehibernate/src=/optional=/true=/=/maven.pomderived=/true=/&lt;samplehibernate" element1="src/main/java/com/demo/TestHibernate.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1693575738782" units="0" version="1.0"/>
+</session>
