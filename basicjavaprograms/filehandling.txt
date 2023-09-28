@@ -1,0 +1,29 @@
+class Test{
+h1;
+h2;
+
+p v reconcile(String s){
+
+//parse s. use st class
+//convert string to integer for amount field
+//check if key exists
+//check if value is there
+//if value is there, get and do addition
+//put the added value in h1 or h2
+}
+
+p v reconcileWithFile(Striing inputfilepath, String outputfilepath){
+reconcile("");
+	reconcile("");
+	reconcile("");
+}
+
+p s v m(){
+	Test t = new Test();
+	t.reconcileWithFile("", "");
+	t.reconcile("");
+	t.reconcile("");
+	t.reconcile("");
+}
+
+}

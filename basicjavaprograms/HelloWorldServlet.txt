@@ -1,0 +1,94 @@
+package servletprograms;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+/**
+ * Servlet implementation class HelloWorldServlet
+ */
+//@WebServlet("/HelloWorldServlet")
+public class HelloWorldServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public HelloWorldServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: venkat testing").append(request.getContextPath());
+		String destination = "hello.jsp";
+		
+		String b = request.getParameter("dept");
+		System.out.println(b);
+		try {
+		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+
+	      // Getting the connection
+	      String mysqlUrl = "jdbc:mysql://localhost:3306/sampleschema";
+	      Connection con = DriverManager.getConnection(mysqlUrl, "root", "root");
+	      System.out.println("Connection established......");
+
+	      // Creating a Prepared Statement
+	      String query = "INSERT INTO SAMPLE VALUES(?)";
+	      PreparedStatement pstmt = con.prepareStatement(query);
+
+	      // Inserting data for the first employee
+	      pstmt.setString(1, b);
+	      
+	      pstmt.executeUpdate();
+
+	      // Inserting data for the second employee
+	      
+
+	      // Inserting data for the third employee
+	      
+	      System.out.println("Rows inserted ....");
+
+	      pstmt.close();
+	      con.close();
+		}catch(SQLException e) {
+			e.printStackTrace();
+			
+		}
+		//You can also connect to DB, save the value of dept in a table.
+		RequestDispatcher dispatcher = request.getRequestDispatcher(destination);
+		String name = "john";
+		//You can also connect to DB, get the value of name from SQL query and pass it to JSP page.
+		
+		request.setAttribute("name", name);
+		dispatcher.forward(request, response);
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		// TODO Auto-generated method stub
+		try {
+			doGet(request, response);
+			} catch (ServletException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			}
+	}
+
+}

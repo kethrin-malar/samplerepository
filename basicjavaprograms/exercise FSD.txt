@@ -1,0 +1,66 @@
+
+
+{}}
+
+{{}}
+
+{{{
+
+}}}
+{}{}
+
+
+{{}}
+
+char '{','}'
+int i;
+for(i=0;i<length;i++){
+if(i='{'||i='}'){
+switch
+case1 '{'
+return i;
+
+case2 '}'
+return i;
+
+return value;
+
+
+
+stack {()} :
+
+public class Stack{
+public static void main (string[] args)
+{
+main s1=new main();
+string expr= "{()}"
+for(i=0;i<expr.length;i++)
+char s1= expr.charAt(i);
+
+public static boolean isbalanced(String expr)
+stack s1.new stack();
+
+if(s1.empty){
+s1.push(ch);
+}
+else if(i=='}' && s1.peek=='{' ){ //equal paranthese pop the expression
+s1.pop();
+}
+else({
+s1.push(ch);
+}
+return (s1.empty);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
