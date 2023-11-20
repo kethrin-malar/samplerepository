@@ -1,0 +1,109 @@
+package com.insurance.demo.entity;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "driver")
+public class DriverEntity {
+    @Id
+    private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "policyid")
+    private PolicyEntity policy; 
+
+    private String firstName;
+    private String lastName;
+    private String dateOfBirth;
+    private String phoneNumber;
+    private LocalDate licenseIssuedDate;
+    private String licenseIssuedState;
+    private String licenseNumber;
+    private LocalDateTime createdDate;
+
+    
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public PolicyEntity getPolicy() {
+        return policy;
+    }
+
+    public void setPolicy(PolicyEntity policy) {
+        this.policy = policy;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public LocalDate getLicenseIssuedDate() {
+        return licenseIssuedDate;
+    }
+
+    public void setLicenseIssuedDate(LocalDate licenseIssuedDate) {
+        this.licenseIssuedDate = licenseIssuedDate;
+    }
+
+    public String getLicenseIssuedState() {
+        return licenseIssuedState;
+    }
+
+    public void setLicenseIssuedState(String licenseIssuedState) {
+        this.licenseIssuedState = licenseIssuedState;
+    }
+
+    public String getLicenseNumber() {
+        return licenseNumber;
+    }
+
+    public void setLicenseNumber(String licenseNumber) {
+        this.licenseNumber = licenseNumber;
+    }
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+    
+    
+}

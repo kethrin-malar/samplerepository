@@ -1,0 +1,28 @@
+1695878696468	Copy compilation units
+1695892137727	Rename package 'com.insurance.manytomany'
+1695892155608	Rename package 'com.insurance.onetomany'
+1695892172063	Rename package 'com.insurance.onetomany'
+1695892188180	Rename package 'com.insurance.zerotomany'
+1695892199620	Delete element
+1695892211591	Delete element
+1695892224020	Delete element
+1695892234568	Delete element
+1695892258468	Delete element
+1695892266597	Delete element
+1695892294589	Delete element
+1695892311177	Delete element
+1695894323993	Delete element
+1695894334008	Delete element
+1695901534041	Rename type 'Policy'
+1695901671088	Rename type 'Bill'
+1695902241020	Rename type 'PolicyEditLog'
+1695902840246	Rename type 'Driver'
+1695903613251	Rename type 'Vehicle'
+1695958315538	Rename type 'PolicyCoverage'
+1695959387617	Rename type 'Coverage'
+1695959691432	Rename type 'VehicleCoverage'
+1695959888034	Rename type 'PaymentDetail'
+1695960147625	Rename type 'DriverAddress'
+1695960374656	Rename type 'DriverTrafficViolationRecord'
+1695960816046	Rename type 'TrafficViolationCode'
+1695961498573	Rename type 'VehicleDriver'

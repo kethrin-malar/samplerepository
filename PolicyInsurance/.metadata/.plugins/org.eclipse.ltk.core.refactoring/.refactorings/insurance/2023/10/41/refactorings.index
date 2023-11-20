@@ -1,0 +1,28 @@
+1696915337461	Rename compilation unit 'DriverBusiness.java'
+1696991020398	Delete element
+1696999839667	Copy compilation unit
+1696999848841	Delete element
+1697000821115	Rename type 'PolicyException'
+1697000929220	Delete element
+1697000963179	Delete element
+1697026550415	Delete element
+1697181526271	Rename compilation unit 'AdminController.java'
+1697181608320	Rename compilation unit 'package-info.java'
+1697181894018	Rename type 'AdminBusiness'
+1697182039656	Rename compilation unit 'package-info.java'
+1697182120326	Rename type 'AdminService'
+1697182270150	Rename compilation unit 'package-info.java'
+1697182663798	Delete element
+1697188814488	Rename compilation unit 'JpaRepository.java'
+1697196458861	Delete element
+1697273600939	Delete elements
+1697273609514	Delete elements
+1697280690123	Rename package 'com.insurance.business'
+1697280732587	Rename package 'com.insurance.business.impl'
+1697280755260	Rename package 'com.insurance.controller'
+1697280776002	Rename package 'com.insurance.entity'
+1697280821925	Rename package 'com.insurance.model'
+1697280869660	Rename package 'com.insurance.repository'
+1697280905134	Rename package 'com.insurance.service'
+1697280932736	Rename package 'com.insurance.service.impl'
+1697281820320	Delete element

@@ -1,0 +1,16 @@
+package com.insurance.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.insurance.demo.entity.DriverEntity;
+
+@Service
+public class DashboardService {
+
+    @Autowired
+    private DriverRepository driverRepository;
+    public DriverEntity getDriverById(String driverId) {
+        return driverRepository.findByDriverID(driverId);
+    }
+}

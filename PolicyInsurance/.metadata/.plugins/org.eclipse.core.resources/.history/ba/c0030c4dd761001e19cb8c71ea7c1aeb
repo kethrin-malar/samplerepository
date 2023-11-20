@@ -1,0 +1,76 @@
+package com.insurance.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "bill")
+public class BillEntity {
+    @Id
+    private long id;
+
+    @ManyToOne
+    @JoinColumn(name = "policyid")
+    private PolicyEntity policy;
+    
+    private LocalDateTime dueDate;
+    private double minimumPayment;
+    private LocalDateTime createdDate;
+    private double balance;
+
+   
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public PolicyEntity getPolicy() {
+        return policy;
+    }
+
+    public void setPolicy(PolicyEntity policy) {
+        this.policy = policy;
+    }
+
+    public LocalDateTime getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDateTime dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public double getMinimumPayment() {
+        return minimumPayment;
+    }
+
+    public void setMinimumPayment(double minimumPayment) {
+        this.minimumPayment = minimumPayment;
+    }
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+    
+    
+}

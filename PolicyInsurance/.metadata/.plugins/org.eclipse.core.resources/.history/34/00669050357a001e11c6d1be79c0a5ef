@@ -1,0 +1,9 @@
+package com.insurance.demo.business;
+
+
+	
+import com.insurance.demo.entity.DriverEntity;
+
+public interface DashboardBusiness {
+	public String createDriver(DriverEntity driver);
+}

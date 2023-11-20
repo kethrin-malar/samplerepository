@@ -1,0 +1,57 @@
+package com.insurance.entity;
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "policycoverage")
+public class PolicyCoverageEntity {
+    @Id
+    private long id;
+
+    @ManyToOne
+    @JoinColumn(name = "policyid")
+    private PolicyEntity policy; // Mapping to the PolicyEntity
+
+    @ManyToOne
+    @JoinColumn(name = "coverageid")
+    private CoverageEntity coverage; // Mapping to the CoverageEntity
+
+    private LocalDateTime createdDate;
+
+    
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public PolicyEntity getPolicy() {
+        return policy;
+    }
+
+    public void setPolicy(PolicyEntity policy) {
+        this.policy = policy;
+    }
+
+    public CoverageEntity getCoverage() {
+        return coverage;
+    }
+
+    public void setCoverage(CoverageEntity coverage) {
+        this.coverage = coverage;
+    }
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+    
+    
+}

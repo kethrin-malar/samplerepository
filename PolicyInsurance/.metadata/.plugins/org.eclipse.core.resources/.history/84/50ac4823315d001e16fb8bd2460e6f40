@@ -1,0 +1,24 @@
+package com.insurance.model;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
+public class Driver {
+	private long id;
+    private Policy policy;
+    private String firstName;
+    private String lastName;
+    private String dateOfBirth;
+    private String phoneNumber;
+    private LocalDate licenseIssuedDate;
+    private String licenseIssuedState;
+    private String licenseNumber;
+    private LocalDateTime createdDate;
+    private ArrayList<DriverAddress> addresses;
+    private ArrayList<DriverTrafficViolationRecord> violationRecords;
+    private ArrayList<VehicleDriver> vehicleDriver;
+
+
+
+}

@@ -1,0 +1,20 @@
+package com.insurance.model;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
+public class Policy {
+	private long id;
+    private String policyNumber;
+    private LocalDateTime policyEffectiveDate;
+    private LocalDateTime policyExpireDate;
+    private String paymentOption;
+    private Double totalAmount;
+    private LocalDateTime createdDate;
+    private ArrayList<PolicyEditLog> editLogs;
+    private ArrayList<Bill> bills;
+    private ArrayList<Driver> drivers;
+    private ArrayList<Vehicle> vehicles;
+    private ArrayList<PolicyCoverage> policyCoverage;
+
+}

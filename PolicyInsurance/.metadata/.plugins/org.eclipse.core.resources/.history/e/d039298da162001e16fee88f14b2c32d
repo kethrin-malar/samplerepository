@@ -1,0 +1,34 @@
+package com.insurance.business.impl;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.insurance.model.Driver;
+import com.insurance.repository.DriverRepository;
+
+@Service
+public class DriverBusiness {
+
+    @Autowired
+    private DriverRepository driverRepository;
+
+    public Driver saveDriver(Driver driver) {
+        return driverRepository.save(driver);
+    }
+
+    public Driver findDriverById(long id) {
+        return driverRepository.findById(id).orElse(null);
+    }
+
+    public List<Driver> findAllDrivers() {
+        return driverRepository.findAll();
+    }
+
+    public void removeDriver(long id) {
+        driverRepository.deleteById(id);
+    }
+
+  
+
+}

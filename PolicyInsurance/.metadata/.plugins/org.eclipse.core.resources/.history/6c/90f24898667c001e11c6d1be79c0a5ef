@@ -1,0 +1,25 @@
+package com.insurance.demo.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.insurance.demo.entity.DriverEntity;
+import com.insurance.demo.repository.DashboardRepository;
+import com.insurance.demo.service.DashboardService;
+
+private DriverModel mapDriverEntityToModel(DriverEntity driverEntity) {
+	DriverModel driverModel = new DriverModel();
+    if (driverEntity != null) {
+    	driverModel.setId(driverEntity.getId());
+        driverModel.setPolicy_id(driverEntity.getPolicy_id());
+        driverModel.setFirst_Name(driverEntity.getFirst_Name());
+        driverModel.setLast_Name(driverEntity.getLast_Name());
+        driverModel.setDate_Of_Birth(driverEntity.getDate_Of_Birth());
+        driverModel.setPhone_Number(driverEntity.getPhone_Number());
+        driverModel.setLicense_Issued_Date(driverEntity.getLicense_Issued_Date());
+        driverModel.setLicense_Issued_State(driverEntity.getLicense_Issued_State());
+        driverModel.setLicense_Number(driverEntity.getLicense_Number());
+        driverModel.setCreated_Date(driverEntity.getCreated_Date());
+            }
+    return customerModel;
+}
