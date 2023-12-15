@@ -1,0 +1,67 @@
+<p>create-policy works!</p>
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Create Policy </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <div>    
+                            <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+                                <div>
+                                    <label for="id">
+                                        id
+                                  </label>
+                                  <input id="id" type="text" [(ngModel)]="policy.id" name="id">                      
+                                </div>
+                              
+                                <div>
+                                    <label for="policy_Number">
+                                        policy_Number
+                                  </label>
+                                  <input id="policy_Number" type="text" [(ngModel)]="policy.policy_Number" name="policy_Number">                      
+                                </div>
+                              
+                                <div>
+                                  <label for="policy_Effective_Date">
+                                    policy_Effective_Date
+                                  </label>
+                                  <input id="policy_Effective_Date" type="text" [(ngModel)]="policy.policy_Effective_Date" name="policyEffectiveDate">                        
+                                </div>
+                              
+                                <div>
+                                  <label for="policy_Expire_Date">
+                                    policy_Expire_Date
+                                  </label>
+                                  <input id="policy_Expire_Date" type="text" [(ngModel)]="policy.policy_Expire_Date" name="policy_Expire_Date">
+                                </div>
+                              
+                                <div>
+                                  <label for="payment_Option">
+                                    payment_Option
+                                  </label>
+                                  <input id="payment_Option" type="text" [(ngModel)]="policy.payment_Option" name="payment_Option">
+                                </div>
+                              
+                                <div>
+                                  <label for="total_Amount">
+                                    total_Amount
+                                  </label>
+                                  <input id="total_Amount" type="text" [(ngModel)]="policy.total_Amount" name="total_Amount">
+                                </div>
+                              
+                                <div>
+                                  <label for="created_Date">
+                                    created_Date
+                                  </label>
+                                  <input id="created_Date" type="text" [(ngModel)]="policy.created_Date" name="created_Date">
+                                </div>
+                              
+                                <button class="button" type="submit">Submit</button>
+                                </form>
+                                
+                                 
+                                  
+                        </div>
