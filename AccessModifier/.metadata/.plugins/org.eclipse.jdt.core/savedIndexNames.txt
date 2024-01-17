@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\work\java sample\AccessModifier\.metadata\.plugins\org.eclipse.jdt.core
+699295220.index
+1048350443.index
