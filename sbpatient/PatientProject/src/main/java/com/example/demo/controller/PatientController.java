@@ -27,6 +27,11 @@ public class PatientController {
 	return patientService.getAllPatients();
 	}
 	
+	@GetMapping("/{id}")
+    public Map<String, Object> getProductById(@PathVariable int id) {
+        return patientService.findById(id);
+    }
+	
 	 @PutMapping("/update/{id}")
 	    public String updatePatient(@PathVariable int id, @RequestBody Patient patient) {
 	        patient.setPatientId(id);

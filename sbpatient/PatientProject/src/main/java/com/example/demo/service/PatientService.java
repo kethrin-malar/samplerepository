@@ -27,6 +27,11 @@ public class PatientService {
         return jdbcTemplate.queryForList(sql);
     }
 	
+	public Map<String, Object> findById(int id) {
+        String sql = "SELECT * FROM Patient WHERE PatientId = ?";
+        return jdbcTemplate.queryForMap(sql, id);
+    }
+	
 	 public void updatePatient(Patient patient) {
 	        String sql = "UPDATE Patient SET PatientName = ?, PatientLocation = ?, PatientAge = ?, PatientGender = ? WHERE PatientId = ?";
 	        jdbcTemplate.update(sql, patient.getPatientName(), patient.getPatientLocation(), patient.getPatientAge(), patient.getPatientGender(), patient.getPatientId());

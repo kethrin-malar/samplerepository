@@ -1,6 +1,6 @@
 package com.sample.controller;
 
-
+//Run the code in sample1 right click run on server
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -31,6 +31,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -45,7 +46,7 @@ import com.sample.model.Logon;
 
 @Controller
 @Scope("prototype")
-@RequestMapping("/rmsampledemo")
+@RequestMapping("/")
 public class LogonController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(LogonController.class);
@@ -54,10 +55,14 @@ public class LogonController {
 	private Customer mycust;
 	
 	
-
-
+	@GetMapping("/demo")
+	 public String display()  
+    {  
+        return "insertCourse";  
+    }   
+	
 	//@RequestMapping(value = "/vardhan", method = RequestMethod.GET)
-	@GetMapping("/vardhan")
+	@GetMapping("/listcourse")
 	public String landing(Locale locale, Model model) throws SQLException {
 		System.out.println("Home Page Requested, locale = " + locale);
 		Date date = new Date();
@@ -114,6 +119,44 @@ public class LogonController {
 	
 }
 
+	@PostMapping("/insertCourse")
+    public String insertCourse(
+            @RequestParam("courseid") String courseid,
+            @RequestParam("coursename") String coursename,
+            @RequestParam("coursecategory") String coursecategory,
+            @RequestParam("credits") String credits,
+            Model model) {
+        try {
+            // Database connection properties
+            String jdbcUrl = "jdbc:mysql://localhost:3306/bootbasic1db";
+            String username = "root";
+            String password = "root";
+
+            // Create database connection
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+                // Prepare SQL statement
+                String sql = "INSERT INTO course (courseid, coursename, coursecategory, credits) VALUES (?, ?, ?, ?)";
+                try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                    statement.setString(1, courseid);
+                    statement.setString(2, coursename);
+                    statement.setString(3, coursecategory);
+                    statement.setString(4, credits);
+
+                    // Execute SQL statement
+                    int rowsAffected = statement.executeUpdate();
+                if (rowsAffected > 0) {
+                    model.addAttribute("message", "Course inserted successfully.");
+                    } 
+
+            }
+            }
+        } catch (Exception e) {
+
+        }
+        return "success"; 
+    }
+	
 		
 		
 	@RequestMapping(value = "/satish", method = RequestMethod.POST)
