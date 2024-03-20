@@ -128,9 +128,9 @@ public class LogonController {
             Model model) {
         try {
             // Database connection properties
-            String jdbcUrl = "jdbc:mysql://localhost:3306/bootbasic1db";
+            String jdbcUrl = "jdbc:mysql://localhost:3306/sampleschemas";
             String username = "root";
-            String password = "root";
+            String password = "Root";
 
             // Create database connection
             Class.forName("com.mysql.cj.jdbc.Driver");
