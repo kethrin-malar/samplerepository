@@ -2,6 +2,8 @@ package com.demo;
 
 
 
+
+
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
@@ -29,6 +31,7 @@ import jakarta.persistence.TypedQuery;
 import com.demo.dto.CourseEntity;
 
 import com.demo.dto.EmployeeEntity;
+import com.demo.dto.Sample;
 import com.demo.dto.Student;
 import com.demo.dto.User;
 import com.demo.manytomany.dto.ReaderEntity;
@@ -157,6 +160,40 @@ public class TestHibernate {
 			System.out.println(obj.getCoursename());
 			System.out.println(obj.getCoursecategory());
 			System.out.println(obj.getCredits());
+			
+		}
+		//session.getTransaction().commit();
+        System.out.println("Updated Successfully");
+		sessionFactory.close();
+
+}
+	
+	
+	public static void sampleBasicUpdate() {
+	    SessionFactory sessionFactory = getSessionFactory(null);
+	    Session session = sessionFactory.openSession();
+	    session.beginTransaction();
+
+	    Sample obj = new Sample();
+	    //obj.setName("DBMS");
+	    obj.setLocation("Mumbai");
+	    //obj.setCredits("5");
+
+	    session.persist(obj);
+	    
+	   Sample  s =(Sample)session.get(Sample.class, obj.getId());
+	    s.setLocation("Trichy");
+	    session.update(s);
+	    session.getTransaction().commit();
+	    System.out.println("Generated sample id is : "+obj.getId());
+	    session.get(Sample.class, obj.getId());
+		//session.getTransaction().commit();
+		if(obj!=null) {
+			
+			
+			System.out.println(obj.getName());
+			System.out.println(obj.getLocation());
+			//System.out.println(obj.getCredits());
 			
 		}
 		//session.getTransaction().commit();
@@ -703,7 +740,8 @@ public static void UserMapping() {
 		//courseManyToMany();
 	     //UserOneToMany();
 		//userOneToOne();
-		courseBasicUpdate();
+		//courseBasicUpdate();
+		 sampleBasicUpdate(); 
 	}
 
 	
