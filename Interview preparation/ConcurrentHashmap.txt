@@ -1,0 +1,31 @@
+ConcurrentHashmap sample 
+ java.util.concurrent package
+ concurrentHashMap is better for normal hashmap beacause of thread safe.
+ ConcurrentHashMap is a thread-safe implementation of the Map interface in Java, which means multiple threads can access it simultaneously 
+ without any synchronization issues.
+ ConcurrentHashMap provides various methods for atomic operations such as putIfAbsent(), replace(), and remove().
+ 
+Concurrency-Level: It is the number of threads concurrently updating the map. The implementation performs internal sizing to try to accommodate this 
+many threads.
+Load-Factor: It’s a threshold, used to control resizing.
+Initial Capacity: Accommodation of a certain number of elements initially provided by the implementation. if the capacity of this map is 10. It means that 
+it can store 10 entries.
+
+syntax:concurrentHashMap<K, V> chm = new ConcurrentHashMap<>(int initialCapacity, float loadFactor, int concurrencyLevel);
+
+
+Parameters	                                     HashMap	                                                    ConcurrentHashMap
+Synchronization	                               Non-synchronized	                                                   synchronized
+Thread-safety	                                Not thread-safe	                                                   Thread-safe
+Iterator	                        It is fail-fast and throws an exception during iteration	     It is fail-safe and performs iteration by multiple threads
+Null Values	                                It allows for storing null keys and values.	               It does not allow to store null key/values.
+Performance	                                             faster	                                                   Slower than Hashmap
+
+
+Singleton pattern:single instance 
+define a class that has only one instance and provides a global point of access to it".
+singleton obj = new singleton();-->new  create new object so avoid new keyword using singleton is best practise
+
+protype :it is copy of object 
+one object same refernce affect the data -->shallow copy
+two differnet object not affect other -->deep copy

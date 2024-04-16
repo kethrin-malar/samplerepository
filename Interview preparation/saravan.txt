@@ -1,0 +1,170 @@
+concurrentHashmap sample--->task
+Design pattern:
+
+java pattern:-
+singlton
+protype
+DAO
+MVC
+Factory
+session facade
+factory pattern
+visitor 
+
+j2E-frontcontroller,intercepting filter
+
+-------->List	
+List is an interface
+List interface extends the Collection framework	
+List cannot be instantiated.
+List interface is used to create a list of elements(objects) that are associated with their index numbers.	
+List interface creates a collection of elements that are stored in a sequence and they are identified and accessed using the index.	
+
+---------->ArrayList
+ArrayList is a class
+ArrayList extends AbstractList class and implements List interface
+ArrayList can be instantiated.
+ArrayList class is used to create a dynamic array that contains objects.
+ArrayList creates an array of objects where the array can grow dynamically.
+
+
+1.What is Enum and how to compare with another string ?->thread-threadExample program folder name
+We define an Enum called DayOfWeek to represent the days of the week.
+In the main method, we attempt to convert the string "MONDAY" to the corresponding Enum 
+constant using the valueOf() method.We handle the case where the provided string is not a
+valid Enum constant by catching the IllegalArgumentException.
+Finally, we compare the obtained Enum constant with DayOfWeek.
+MONDAY using the equality (==) operator and print the result accordingly.
+
+package saravan;
+
+public class EnumStringComparison {
+    
+    // Define the Enum for days of the week
+    public enum DayOfWeek {
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+    }
+
+    public static void main(String[] args) {
+        // Convert string to Enum
+        DayOfWeek inputDay = null;
+        try {
+            inputDay = DayOfWeek.valueOf("MONDAY");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid day of the week.");
+            return;
+        }
+
+        // Compare Enum with string
+        if (inputDay == DayOfWeek.MONDAY) {
+            System.out.println("The Enum value represents Monday.");
+        } else {
+            System.out.println("The Enum value does not represent Monday.");
+        }
+    }
+}
+
+
+
+
+
+2.what is the collection class that are used for maintaing the Ascending order ?
+SortedSet Interface
+Sorted set interface maintains mapping in ascending order. They are used for naturally ordered collection.
+
+3.How to create Custom/Userdefined exceptions ?
+Access_specifier method_name throws customException { throw new customException();
+}
+
+4.Difference between final, finally and finalize
+
+Final:
+
+A final class variable whose value cannot be changed.
+A final is declared as class level, they cannot be inherited.
+If the final is declared as method level, they cannot be overridden.
+ Finally:
+
+It’s a block of statements that definitely executes after the try-catch block.
+If the try block fails means, the final block will execute once.
+Finalize:
+
+It will clean up processing memory space.
+
+6.Can we have a method without catch ? If so how to handle the exceptions ?
+
+->If you do not want to handle the exception thrown using the try-catch block then you have to declare that exception using the 
+throws keyword and it has to be handled by the calling method.
+
+public class Example {
+    // Method that declares IOException in its throws clause
+    public void readFile() throws IOException {
+        // This method could potentially throw an IOException
+        // For simplicity, we'll just simulate throwing an IOException
+        throw new IOException("File not found");
+    }
+
+
+->Yes, we can have try without catch block by using finally block. Finally block always executes even if you have exception or return statement 
+in try block except in case of System.
+
+7.Is there a suitation where finally block will not invoke ?
+ The finally block may not execute if the JVM exits while the try or catch code is being executed. 
+ 
+ 8.When a client needs to replace an existing Resource entirely, they can use PUT. When they're doing a partial update, they can use HTTP PATCH.
+
+what are the mappings present in Hibernate ?
+
+what is All,Detach,Merge,persist in CascadeType ?
+CascadeType. ALL are all operations (PERSIST, MERGE, REMOVE, REFRESH, DETACH) 
+that are propagated to the associated entity to the relating entities in persistence context.
+
+what is the annotation that is used to provide the column name in DAO layers ?
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employee")
+public class Employee {
+    @Id
+    private Long id;
+
+    @Column(name = "employee_name")
+    private String name;
+
+    // Getters and setters
+}
+
+
+What is the query to delete 1000 rows in a single shot ?
+DELETE FROM your_table_name
+LIMIT 1000;
+
+
+
+Query to retrieve unique values from the table. You have Duplicate entries in City table. Column: cityId, cityName.
+SELECT DISTINCT cityName
+FROM City;
+
+Query to retrieve list employees that are allocated to multiple projects
+Table :EmployeeProjectMapping
+Employee, Project
+E1,P1
+E1,P2
+E2,P2
+E3,P3
+E3,P4
+E5,P5
+SELECT Employee
+FROM EmployeeProjectMapping
+GROUP BY Employee
+HAVING COUNT(Project) > 1;
+
+
+Cursor in SQL
+In SQL, a cursor is a temporary workstation that is allocated by the database server during the execution of a statement.
+
+It is a database object that allows us to access data of one row at a time. This concept of SQL is useful when the user wants to update the rows 
+of the table one by one.

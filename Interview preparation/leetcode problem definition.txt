@@ -1,0 +1,86 @@
+23/12/23-leetcode problem unique element 
+Def:-
+Let's analyze the array nums = {1, 2, 3, 2}:
+
+Outer Loop (i): This loop goes through each element in the array.
+
+Inner Loop (j): For each i, the inner loop checks if the element at index i has any other matching occurrence in the array.
+
+Here's the detailed breakdown for each element (i):
+
+i = 0 (nums[i] = 1):
+
+Inner loop:
+j = 0 (1 == 1, i == j): Same element, skipping.
+j = 1 (1 != 2): No match, continues.
+j = 2 (1 != 3): No match, continues.
+j = 3 (1 != 2): No match, continues.
+Since count remains 0, nums[i] = 1 is unique.
+i = 1 (nums[i] = 2):
+
+Inner loop:
+j = 0 (2 != 1): No match, continues.
+j = 1 (2 == 2, i == j): Same element, skipping.
+j = 2 (2 != 3): No match, continues.
+j = 3 (2 == 2, i != j): Match found, breaks the loop.
+count becomes 1, indicating that nums[i] = 2 is not unique.
+i = 2 (nums[i] = 3):
+
+Inner loop:
+j = 0 (3 != 1): No match, continues.
+j = 1 (3 != 2): No match, continues.
+j = 2 (3 == 3, i == j): Same element, skipping.
+j = 3 (3 != 2): No match, continues.
+Since count remains 0, nums[i] = 3 is unique.
+i = 3 (nums[i] = 2):
+
+Inner loop:
+j = 0 (2 != 1): No match, continues.
+j = 1 (2 == 2, i != j): Match found, breaks the loop.
+count becomes 1, indicating that nums[i] = 2 is not unique.
+Therefore, after analyzing the entire array:
+
+Unique elements: 1 and 3
+Non-unique elements: 2
+The sum of the unique elements (1 and 3) is calculated and returned as the result.
+
+
+24/12/23-Enumeration
+int[] numbers = {1, 2, 3, 4, 5}; initializes an array of integers.
+The enhanced for loop for (int num : numbers) iterates through each element (num) in the numbers array.
+Inside the loop, System.out.println(num); prints each element of the array.
+The benefit of using enumeration (the enhanced for loop) is its simplicity and readability. It automatically handles iterating through all elements
+ of an array or collection without explicitly managing indices or iteration variables.
+
+Enumeration simplifies code and reduces the chances of off-by-one errors that might occur when manually managing indices in a traditional for loop. 
+It's particularly useful when you want to iterate through all elements of an array or collection without needing the index values themselves.
+
+27/12/2023 sql desc-descending order notboringmovies problem in sql
+
+stack:Basic Operations on Stack
+In order to make manipulations in a stack, there are certain operations provided to us.
+
+push() to insert an element into the stack
+pop() to remove an element from the stack
+top() Returns the top element of the stack.
+isEmpty() returns true if stack is empty else false.
+size() returns the size of stack.
+
+
+
+string:-Java String class provides a lot of methods to perform operations on strings such as compare(),
+ concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() etc.
+
+Java String equals()
+The Java String class equals() method compares the two given strings based on the content of the string. If any character is not matched, it returns false. If all characters are matched, it returns true.
+
+The String equals() method overrides the equals() method of the Object class.
+
+Signature
+publicboolean equals(Object anotherObject)  
+
+
+29/12/23 tree postorder traversal
+
+
+

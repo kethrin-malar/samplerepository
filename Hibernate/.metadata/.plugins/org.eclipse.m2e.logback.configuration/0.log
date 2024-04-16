@@ -3010,3 +3010,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration App references non-
 2024-04-12 17:26:05,164 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\LENOVO\Documents\GitHub\samplerepository\Hibernate\samplehibernate\src\main\resources
 2024-04-12 17:26:05,166 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2024-04-12 17:26:05,167 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\LENOVO\Documents\GitHub\samplerepository\Hibernate\samplehibernate\src\test\resources
+2024-04-13 11:11:58,769 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
