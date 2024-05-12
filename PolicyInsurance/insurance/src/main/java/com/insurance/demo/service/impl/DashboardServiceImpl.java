@@ -18,7 +18,7 @@ public class DashboardServiceImpl implements DashboardService{
 	
 	@Override
 	public Driver getDriverById(long driverId) {
-		DriverEntity driverEntity = dashboardRepository.findById(driverId).get();
+		DriverEntity driverEntity = dashboardRepository.findById((int)driverId).get();
         return mapDriverEntityToModel(driverEntity);
 	}
 	

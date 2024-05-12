@@ -13,13 +13,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     
     CreatePolicyComponent,
     UserComponent,
-    DashboardComponent
+    DashboardComponent,
+    
   ],
   imports: [
    

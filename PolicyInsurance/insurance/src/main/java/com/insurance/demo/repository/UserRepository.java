@@ -10,7 +10,7 @@ package com.insurance.demo.repository;
 
 
 	@Repository
-	public interface UserRepository extends JpaRepository<UserEntity, Long>{
+	public interface UserRepository extends JpaRepository<UserEntity, Integer>{
 		
 		
 	}

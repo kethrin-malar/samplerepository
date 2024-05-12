@@ -8,6 +8,6 @@ import com.insurance.demo.model.Driver;
 
 
 @Repository
-public interface DashboardRepository extends JpaRepository<DriverEntity, Long> {
+public interface DashboardRepository extends JpaRepository<DriverEntity, Integer> {
 
 }

@@ -1,3 +1,0 @@
-Streams and Lambda Expressions in Java
-
-Lambda Expressions:@functional interface->one unimplemented method
